@@ -28,7 +28,11 @@ Without me, my Web site is useless. Without my Web site, I am useless.
 
 <dl>
 {% for post in site.posts limit:5 %}
-<dt><a href="{{ post.url }}">{{ post.title }}</a></dt>
+<dt>
+    <span class="date">{{ post.date | date_to_string }}</span>
+    &mdash;
+    <a href="{{ post.url }}">{{ post.title }}</a>
+</dt>
 <dd>{{ post.excerpt }}</dd>
 {% endfor %}
 </dl>
