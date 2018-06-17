@@ -1,0 +1,35 @@
+---
+layout: post
+title:  If only we had a Standard Generalized Markup Language!
+date:   2006-07-31T02:00:00Z
+tags:   [ technology ]
+---
+
+<p>If you&#8217;ve been participating in various Web-based forums for a while, you may have noticed the great variety of ways you can avoid polluting your fingers with HTML.</p>
+	<ul>
+		<li>Some venerable bulletin-board systems use <a href="http://forums.ft.com/infopop/ubbcode.html">UBBCode™</a>. See, in HTML, if you want to make something <b>boldface</b>, you use &lt;b&gt;codes surrounded by angle brackets&lt;/b&gt;, but UBBCode™ uses [b]square brackets[/b], which are obviously superior.</li>
+	</ul>
+	<ul>
+		<li>Some blog software uses <a href="http://daringfireball.net/projects/markdown/">Markdown</a>, where you can generate an ordered list by putting a digit in front of every list item and create a first-level header by starting a line with “#&#8221;. Others (including <a href="http://textpattern.com/">the software that runs this humble site</a>) use <a href="http://textism.com/tools/textile/">Textile</a>, where you use “#&#8221; to make an ordered list and &#8220;h1.&#8221; to make a header.</li>
+	</ul>
+	<ul>
+		<li>In the Wiki world, you can usually make a link to another page simply by writing the page title in CamelCase. If you&#8217;re composing a page on a <a href="http://moinmoin.wikiwikiweb.de/">MoinMoin</a> wiki and you want to link to a page with normal capitalization, you put the page title in [square brackets].  But if you&#8217;re using <a href="http://twiki.org/">TWiki</a> or <a href="http://www.mediawiki.org/wiki/MediaWiki">MediaWiki</a>, you put it in &#x5b;&#x5b;<em>double</em> square brackets]]. And of course, if you want the text the user sees on the screen to be something other than the name of the page the link points to, TWiki and MediaWiki provide different ways to do that.</li>
+	</ul>
+	<p>Of course, you can use HTML-style tags and escaping within most of these markup languages, but they all have their obscure rules lurking in the background regarding what they&#8217;ll accept. TWiki doesn&#8217;t allow newlines within an HTML tag (e.g., between an element name and its attributes). If you write an HTML tag in Textile with escaped angle brackets (like “&amp;lt;b&amp;gt&#8221;, Textile will happily translate those escaped characters back into angle brackets.  (Guess how I found that out.)</p>
+	<p>Why this Babel of markup languages? I can imagine three justifications:</p>
+	<ol>
+		<li>HTML is hard.</li>
+		<li>The alternative markup languages can be easily translated into valid (X)HTML on the server end, whereas if users are expected to type HTML into these little text boxes, then they&#8217;ll input &#8220;tag soup&#8221; that mucks everything up.</li>
+		<li>Alternative markup languages allow you to add markup features that HTML doesn&#8217;t have<sup><a href="http://ropine.com/yesh/#fn116666907644cd657e11918">1</a></sup>.</li>
+	</ol>
+	<p>To which I say</p>
+	<ol>
+		<li>And these other systems aren&#8217;t? Users who can&#8217;t stand typing in all these angle brackets are better off using <a href="http://kupu.oscom.org/">one of the new Javascript-based Web WYSIWYG editors</a>.</li>
+		<li>That&#8217;s why we have tools like <a href="http://home.ccil.org/~cowan/XML/tagsoup/">TagSoup</a> and <a href="http://tidy.sourceforge.net/">HTML Tidy</a>.</li>
+		<li>It would be better to add those features with language extensions that are consistent with HTML<sup><a href="http://ropine.com/yesh/#fn85432293844cd657e120e6">2</a></sup>, and then use XSL on the server side to rearrange things.</li>
+	</ol>
+	<p>Some day, perhaps, in my Copious Free Time, I will write my own damn blog software that takes its XML straight. I&#8217;m sure there are three or four other geeks in the world who would appreciate such a thing. In the meantime, if you want to write a comment on this fine blog for posterity<sup><a href="http://ropine.com/yesh/#fn210483569244cd657e128b5">3</a></sup>, you have to use Textile markup. It&#8217;s really quite easy once you get the hang of it.</p>
+	<p class="fn" id="fn116666907644cd657e11918"><sup>1</sup> Footnotes, for instance.</p>
+	<p class="fn" id="fn85432293844cd657e120e6"><sup>2</sup> The user could, for example, put &lt;span class=&#8221;footnote&#8221;&gt;(body of footnote)&lt;/span&gt; wherever he or she wanted a footnote marker, and the server could move that text to the end of a document and put the appropriate footnote mark in its place.</p>
+	<p class="fn" id="fn210483569244cd657e128b5"><sup>3</sup> Hello, posterity!</p>
+

@@ -1,0 +1,9 @@
+---
+layout: post
+title:  Not a standards-compliant Web browser, but a remarkable imitation
+date:   2004-02-18T20:15:00Z
+tags:   [ technology ]
+---
+
+<p>Typography freaks know that in a properly formatted block of text, the <em>first paragraph</em> should not be indented, but the first line of <em>every subsequent paragraph</em> should be. On the Web, you can describe this kind of formatting in <a href="http://www.w3.org/TR/CSS2/" title="Cascading Style Sheets, Level 2">CSS2</a> as follows: <blockquote> <pre> p { text-indent: 0; }  p + p { text-indent: 0.2in; } </pre></blockquote> <p>Unfortunately, <abbr title="Internet Explorer">IE</abbr> doesn&#8217;t understand the <code>p + p</code> selector. IE <em>does</em> allow you to insert Javascript into a stylesheet, so I can fake the selector like so:</p> <blockquote> <pre> p { text-indent:expression(         (this.previousSibling == null ||          this.previousSibling.tagName != "P") ?         "0" : "0.2in"     );   } </pre></blockquote> <p>Javascript within stylesheets is yet another Microsoft feature with <a href="http://www.securityfocus.com/archive/1/20031002213942.GA29891@c9x.org/2003-10-03/2003-10-09/0">a security flaw</a> hidden inside it, but I promise I will only use my Web hacks for good, never for evil.</p> <p>Well &#8230; hardly ever for evil.</p> <p class="via">inspired by <a href="http://www.svendtofte.com/code/max_width_in_ie/">Svend Tofte&#8217;s max-width hack</a> via <a href="http://www.diveintomark.org/archives/blinks/2004/02/">dive into mark b-links</a></p></p>
+

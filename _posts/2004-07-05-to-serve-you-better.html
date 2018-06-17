@@ -1,0 +1,9 @@
+---
+layout: post
+title:  To serve you better….
+date:   2004-07-05
+tags:   [ meta ]
+---
+
+<p>I&#8217;ve finally figured out how to make <a href="http://search.cpan.org/~gaas/HTML-Parser-3.36/Parser.pm">HTML::Parser</a> do the right thing, so now, if you type comments into the box at the bottom of an individual blog entry, you can use <em>some</em> HTML, but &#8220;ugly&#8221; and &#8220;unsafe&#8221; tags and attributes will be stripped out. By &#8220;ugly&#8221;, I mean anything that might screw up the page layout, such as the &lt;h1&gt; tag. By &#8220;unsafe&#8221;, I mean anything that might be used as a carrier for a cross-site scripting attack, like the &#8220;onLoad&#8221; attribute. <p>Coming soon: the RSS template will change so that the permalink will point to the individual blog-entry page (<tt>http://dynamic.ropine.com/yo/meta/comments-v2.html</tt>) instead of the page with all the entries of that day (<tt>http://dynamic.ropine.com/2004/07/05#comments-v2</tt>). This might make LiveJournal and other syndication services think I&#8217;ve just posted a half-dozen completely new entries, so I thought I&#8217;d warn y&#8217;all before I did it.</p></p>
+

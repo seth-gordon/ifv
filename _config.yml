@@ -1,1 +1,11 @@
+title: imaginary family values
+author: Seth Gordon
+description: Seth Gordon’s personal site
+show_downloads: false
 theme: jekyll-theme-minimal
+paginate: 15
+paginate_path: "/yo/page:num/"
+logo: /assets/img/headshot-square.jpg
+collections:
+- social_media
+- fiction

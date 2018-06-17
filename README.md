@@ -1,37 +1,32 @@
-## Welcome to GitHub Pages
+# Welcome
 
-You can use the [editor on GitHub](https://github.com/seth-gordon/ifv/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This is my Web site. There are many like it, but this one is mine.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+My Web site is my best friend. It is my life. I must master it as I
+must master my life.
 
-### Markdown
+Without me, my Web site is useless. Without my Web site, I am useless.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## My short fiction
 
-```markdown
-Syntax highlighted code block
+{% for story in site.fiction %}
+### “{{ story.title }}”, in _{{ story.publisher }}_, {{ story.pubdate }}
+{{ story.content }}
+{% endfor %}
 
-# Header 1
-## Header 2
-### Header 3
+## Where else to find me
 
-- Bulleted
-- List
+<ul>
+{% for medium in site.social_media %}
+<li><a href="{{ medium.url }}">{{ medium.name }}</a></li>
+{% endfor %}
+</ul>
 
-1. Numbered
-2. List
+## Recent blog posts
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/seth-gordon/ifv/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+<dl>
+{% for post in site.posts limit:5 %}
+<dt><a href="{{ post.url }}">{{ post.title }}</a></dt>
+<dd>{{ post.excerpt }}</dd>
+{% endfor %}
+</dl>

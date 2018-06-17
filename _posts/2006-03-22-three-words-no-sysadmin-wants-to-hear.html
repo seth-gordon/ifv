@@ -1,0 +1,13 @@
+---
+layout: post
+title:  Three words no sysadmin wants to hear
+date:   2006-03-22
+tags:   [ technology, diary ]
+---
+
+<p>I&#8217;m in the middle of moving ropine.com services from the old G4 in our basement to a virtual server at <a href="http://openhosting.com/home">OpenHosting</a>.  (Virtual hosting is cheap enough these days that a cheap virtual server plus a cheap DSL line costs less than the static-IP DSL line that we have now.)</p>
+	<p>The first thing I moved over was the email. In the past, I&#8217;ve turned up my nose at <a href="http://sendmail.com/">sendmail</a>, because although it&#8217;s the traditional Unix <acronym title="Mail Transfer Agent">MTA</acronym>, it&#8217;s been <a href="http://cr.yp.to/maildisasters/sendmail.html">a poster child for insecure code</a>. But OpenHosting comes with sendmail already set up, and I was tired of all the effort it took to get my MTA and my spam filter and my IMAP server to make nice to one another, and I decided to take advantage of whatever my ISP and its Linux distribution had done to make my life easier. (I am coming to the realization, in my old age, that every hour spent <em>administering</em> my computer is an hour I don&#8217;t spend <em>using</em> it.) And besides, sendmail hadn&#8217;t had any embarrassing security holes in a while.</p>
+	<p>So imagine my delight to see <a href="http://lwn.net/Articles/176596/">an article on LWN.net</a> that begins: &#8220;It&#8217;s been a while since we had a good sendmail vulnerability&#8230;but we need wait no longer. <a href="http://lwn.net/Articles/176595/">Sendmail 8.13.6</a> has just been released in response to a security issue which could lead to a remote root exploit.&#8221;</p>
+	<p>(&#8220;Remote root exploit&#8221; is security-geek shorthand for &#8220;a way for someone who doesn&#8217;t even have an account on your machine to connect to it and take it over&#8221;.)</p>
+	<p>Hopefully, if anyone has actually figured out a way to take advantage of this security hole, nobody has yet bothered to use it against <em>me</em> (and if they try now, it&#8217;s too late). But maybe I should go to the trouble of setting up <a href="http://cr.yp.to/qmail.html">qmail</a> or <a href="http://www.postfix.org/">postfix</a> after all.</p>
+

@@ -1,0 +1,35 @@
+---
+layout: post
+title:  The struggle against ASCIImperialism continues
+date:   2009-01-15
+tags:   [ technology ]
+---
+
+<p>I learned two things about Linux this week. First, even in <span class="caps">UTF</span>-8 locales, <a href="http://www.gnu.org/software/coreutils/manual/coreutils.html#fold-invocation">fold</a> thinks that any byte with a value above 127 is a space.</p>
+
+<pre><code>$ echo &#39;superextraordinarísimo&#39; | fold -s -w 18
+superextraordinar
+�simo
+$ echo &#39;superextraordinarísimo&#39; | fold -s -w 18 | od -c
+0000000   s   u   p   e   r   e   x   t   r   a   o   r   d   i   n   a
+0000020   r 303  \n 255   s   i   m   o  \n
+0000031
+$ locale
+LANG=en_US.UTF-8
+LC_CTYPE=&quot;en_US.UTF-8&quot;
+LC_NUMERIC=&quot;en_US.UTF-8&quot;
+LC_TIME=&quot;en_US.UTF-8&quot;
+LC_COLLATE=&quot;en_US.UTF-8&quot;
+LC_MONETARY=&quot;en_US.UTF-8&quot;
+LC_MESSAGES=&quot;en_US.UTF-8&quot;
+LC_PAPER=&quot;en_US.UTF-8&quot;
+LC_NAME=&quot;en_US.UTF-8&quot;
+LC_ADDRESS=&quot;en_US.UTF-8&quot;
+LC_TELEPHONE=&quot;en_US.UTF-8&quot;
+LC_MEASUREMENT=&quot;en_US.UTF-8&quot;
+LC_IDENTIFICATION=&quot;en_US.UTF-8&quot;
+LC_ALL=
+</code></pre>
+
+	<p>Second, even if you <em>can</em> solve a tricky document-recoding problem with nothing more than <a href="http://www.faqs.org/docs/abs/HTML/sedawk.html">sed and awk</a>, that doesn&#8217;t mean you <em>should</em>.</p>
+

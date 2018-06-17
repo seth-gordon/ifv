@@ -1,0 +1,17 @@
+---
+layout: post
+title:  The e-postman always pings twice
+date:   2010-04-27
+tags:   [ technology, diary ]
+---
+
+<p>My wife called me at work this morning to report that she hadn&#8217;t gotten any email, not even in her might-be-spam folder. &#8220;I&#8217;ll fix it&#8221;, I said, remembering some odd &#8220;temporary failure in name resolution&#8221; messages I had received from some scripts running on the server (the virtual machine which serves this here site, and which also handles mail to ropine.com) the previous day.  So I restarted the network on the server and figured that would be the end of it.</p>
+
+	<p>(It&#8217;s always dangerous when you <em>think you know what caused your problem</em>, and therefore focus all your attention on <em>what you think is the cause</em>, rather than the actual problem.)</p>
+
+	<p>Tonight, when I got home, she said she <em>still</em> hadn&#8217;t gotten any mail, and I looked at the situation again, and discovered that <a href="http://www.exim.org/">my mail server</a> was not listening to the rest of the world. I&#8217;m not sure why it decided to take an unscheduled vacation&#8212;I assume this all has something to do with an unfortunate incident yesterday where I filled up my hard drive&#8212;but I brought it back up, and one of the nice things about ubiquity of spam is that it&#8217;s really easy to tell when your mail service is working.</p>
+
+	<p>I must admit that every time this happens I wonder whether running my very own mail server on a machine (albeit virtual) that I administer by my very own self demonstrates more geek-machismo than practical sense. However, for the time being, I am too lazy to migrate to doing it any other way.</p>
+
+	<p>Mail servers that are properly configured, i.e., those not used for sending spam, should just keep trying to send their messages for about five days before giving up, so if you sent us something today, you shouldn&#8217;t have to do anything else to make sure we get it.</p>
+

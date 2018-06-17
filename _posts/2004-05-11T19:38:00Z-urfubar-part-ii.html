@@ -1,0 +1,9 @@
+---
+layout: post
+title:  URFUBAR, part II
+date:   2004-05-11T19:38:00Z
+tags:   [ technology ]
+---
+
+<p>To continue with yesterday&#8217;s <a href="http://dynamic.ropine.com/yo/tech/java/urfubar.html">saga</a> of the dain-bramaged Java library <abbr title="Application Programming Interface">API</abbr>: <p>It turns out that <tt>someURI = new <acronym title="&#34;file&#34;, someURL.getPath(">URI</acronym>, null)</tt> does not, after all, convert <abbr title="Uniform Resource Locator">URL</abbr>s to <abbr title="Uniform Resource Identifier">URI</abbr>s appropriately: when the path information gets converted to and then from a string, special characters get double-escaped. The proper incantation, it turns out, is <tt>someURI = URI.<a href="http://java.sun.com/j2se/1.4.2/docs/api/java/net/URI.html#create(java.lang.String)">create</a>(someURL.toString());</tt>.</p> <p>At least, I <em>think</em> that&#8217;s the proper incantation. It works for my test directory, but nothing in the documentation for <a href="http://java.sun.com/j2se/1.4.2/docs/api/java/net/URL.html#toString()">URL.toString()</a> guarantees that the method will output a string in <a href="http://www.ietf.org/rfc/rfc2396.txt">the format that URI.create(String) is documented to read</a>.</p> <p>Why should I be forced to explicitly convert this information to and from a string format, anyway? I thought I was programming in Java because Java&#8217;s type system lets me concentrate on the abstractions in a system (locations and indicators) and doesn&#8217;t force me to think about other module authors&#8217; implementation decisions (string formats). <i>[No, you&#8217;re programming in Java because nobody wanted to hire you as a Perl programmer. &#8212;ed.]</i> Oh. All right, then.</p></p>
+
