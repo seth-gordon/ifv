@@ -9,14 +9,16 @@ Without me, my Web site is useless. Without my Web site, I am useless.
 
 ## My short fiction
 
+<dl class="flatlist">
 {% for story in site.fiction %}
-### “{{ story.title }}”, in _{{ story.publisher }}_, {{ story.pubdate }}
-{{ story.content }}
-{% endfor %}
+  <dt>“{{ story.title }}”, in <i>{{ story.publisher }}</i>, {{ story.pubdate }}</dt>
+  <dd>{{ story.content }}</dd>
+  {% endfor %}
+</dl>
 
 ## Where else to find me
 
-<ul>
+<ul class="flatlist">
 {% for medium in site.social_media %}
 <li><a href="{{ medium.url }}">{{ medium.name }}</a></li>
 {% endfor %}

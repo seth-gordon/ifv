@@ -11,5 +11,9 @@ sidebarlink: yo/index.html
 {{content}}
 
 {% if page.tags %}
-  <small><em>{{ page.tags | join: " / " }}</em></small>
+<small><ul class="flatlist">
+  {% for t in page.tags %}
+  <li>{{ t }}</li>
+  {% endfor %}
+</ul></small>
 {% endif %}
