@@ -2,20 +2,33 @@
 ---
 
 @import "{{ site.theme }}";
-@import url('https://fonts.googleapis.com/css?family=Alegreya:400,400i,500,700&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Alegreya:400,400i,700,700i&subset=latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Alegreya:800&text=%20aefghilmnorsuvy');
 
 // customizations will go here
+
+// color scheme
+// http://paletton.com/#uid=30t0u0kllllaFw0g0qFqFg0w0aF
+$normal-ink: #2f1500;
+$normal-paper: #ffe3cd;
+$pale-ink: #6c370b;
+$link-ink: #2e4272;
+$dark-link-ink: #0e2049;
+$alt-paper: #e8b184;
+
 body {
     font-family: Alegreya, Georgia, "Times New Roman", Times, serif;
     font-size: 18px;
     line-height: 1.42857143;
-    color: #552700;
-    background-color: #fff1e6;
+    color: $normal-ink;
+    background-color: $normal-paper;
 }
 
 header h1 {
     font-weight: 800;
+    a:hover {
+	font-weight: 800;
+    }
 }
 
 header .description {
@@ -26,14 +39,11 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.1;
     margin-top: 18px;
     margin-bottom: 9px;
-}
-
-h6, h4, h2 {
-    font-weight: 500;
-}
-
-h5, h3, h1 {
     font-weight: 700;
+}
+
+h4, h6 {
+    color: $pale-ink;
 }
 
 h6, h5 {
@@ -59,3 +69,42 @@ p {
 p + p {
     text-indent: 1em;
 }
+
+a {
+    color: $link-ink;
+}
+
+a:hover, a:focus {
+    color: $dark-link-ink;
+}
+
+blockquote {
+    border-left: 1px solid $alt-paper;
+}
+
+code, pre, strong {
+    color: $normal-ink;
+}
+
+pre {
+    background: $normal-paper;
+    border: 1px solid $alt-paper;
+}
+
+th, td {
+    border-bottom: 1px solid $alt-paper;
+}
+
+dt, th {
+    color: $pale-ink;
+}
+
+hr {
+    background: $alt-paper;
+}
+
+.verse ul { margin-left: 0.2in; text-indent: -0.2in; list-style: none; }
+
+.stb { margin-top: 0.1in; }
+.mtb { margin-top: 0.15in; }
+.ltb { margin-top: 0.2in; }
