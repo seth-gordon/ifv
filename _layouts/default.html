@@ -14,9 +14,21 @@
   <body>
     <div class="wrapper">
       <header>
-      <h1><a href="{{ layout.sidebarlink | default: "/" | absolute_url }}">
+      {% if layout.title and layout.title != site.title %}
+      <p class="superhead">
+        <a href="{{ "/" | absolute_url }}">{{ site.title }}</a>
+        presents
+      </p>
+      {% endif %}
+      <h1>
+      {% if page.suppress_link %}
       {{ layout.title | default: site.title }}
-      </a></h1>
+      {% else %}
+      <a href="{{ layout.sidebarlink | default: "/" | absolute_url }}">
+      {{ layout.title | default: site.title }}
+      </a>
+      {% endif %}
+      </h1>
       <p class='description'>{{ layout.description | default: site.description }}</p>        
         {% if site.logo %}
           <img src="{{site.logo | relative_url}}" alt="Logo" />

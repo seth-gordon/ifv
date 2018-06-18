@@ -12,8 +12,17 @@ sidebarlink: yo/index.html
 
 {% if page.tags %}
 <small><ul class="flatlist">
-  {% for t in page.tags %}
-  <li>{{ t }}</li>
+  {% for tag in page.tags %}
+  <li><a href="/tags/{{ tag }}/">{{ tag }}</a></li>
   {% endfor %}
 </ul></small>
 {% endif %}
+
+<ul class="blognav">
+  {% if page.previous %}
+  <li>Later: <a href="{{ page.previous.url }}">{{ page.previous.title }}</a></li>
+  {% endif %}
+  {% if page.next %}
+  <li>Earlier: <a href="{{ page.next.url }}">{{ page.next.title }}</a></li>
+  {% endif %}
+</ul>

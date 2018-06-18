@@ -62,7 +62,7 @@ h1 {
     font-size: 36px;
 }
 
-small, a small {
+small, a small, .blognav {
     font-size: 13px;
 }
 
@@ -74,12 +74,18 @@ p + p {
     text-indent: 1em;
 }
 
+p.superhead {
+    margin-bottom: -16px;
+}
+
 a {
     color: $link-ink;
 }
 
 a:hover, a:focus {
     color: $dark-link-ink;
+    font-weight: inherit;
+    text-decoration: underline;
 }
 
 blockquote {
@@ -107,6 +113,14 @@ hr {
     background: $alt-paper;
 }
 
+.muted {
+    color: $alt-paper;
+}
+
+table.tagpage td.date {
+    column-width: 11em;
+}
+
 // inline lists
 .flatlist ul, ul.flatlist {
     margin-left: 0;
@@ -114,15 +128,22 @@ hr {
     display: inline;
     li {
 	border-left: 2px solid $alt-paper;
-	padding: 0px 9px;
+	padding: 0px 7px 0px 9px;
 	margin: 9px 0px;
 	list-style: none;
 	display: inline;
     }
     li:first-child {
 	border-left: none;
-	padding: 0px 9px 0px 0px;
+	padding: 0px 7px 0px 0px;
     }
+}
+
+ul.blognav {
+    list-style: none;
+    margin-left: 0px;
+    padding-left: 0px;
+    margin-top: 9px;
 }
 
 

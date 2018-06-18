@@ -1,11 +1,21 @@
+---
+suppress_link: true
+---
 # Welcome
 
-This is my Web site. There are many like it, but this one is mine.
+I am an SF writer, a computer programmer, a father, a husband, a Jew,
+and a general factotum.
 
-My Web site is my best friend. It is my life. I must master it as I
-must master my life.
+I have less hair than [this guy](https://www.imdb.com/name/nm1164861/)
+but more than [this one](https://www.sethgodin.com/).
 
-Without me, my Web site is useless. Without my Web site, I am useless.
+## Where else to find me
+
+<ul class="flatlist">
+{% for medium in site.social_media %}
+<li><a href="{{ medium.url }}">{{ medium.name }}</a></li>
+{% endfor %}
+</ul>
 
 ## My short fiction
 
@@ -16,15 +26,11 @@ Without me, my Web site is useless. Without my Web site, I am useless.
   {% endfor %}
 </dl>
 
-## Where else to find me
+## My blog, *yesh omrim*
 
-<ul class="flatlist">
-{% for medium in site.social_media %}
-<li><a href="{{ medium.url }}">{{ medium.name }}</a></li>
-{% endfor %}
-</ul>
+[See the blog front page here.]({% link yo/index.html %})
 
-## Recent blog posts
+### Recent posts
 
 <dl>
 {% for post in site.posts limit:5 %}
@@ -36,3 +42,17 @@ Without me, my Web site is useless. Without my Web site, I am useless.
 <dd>{{ post.excerpt }}</dd>
 {% endfor %}
 </dl>
+
+### Tags
+
+{% capture tags %}
+  {% for tag in site.tags %}
+    {{ tag[0] }}
+  {% endfor %}
+{% endcapture %}
+{% assign sortedtags = tags | split:' ' | sort %}
+<ul>
+{% for tag in sortedtags %}
+<li><a href="/tags/{{ tag }}/">{{ tag }}</a></li>
+{% endfor %}
+</ul>	

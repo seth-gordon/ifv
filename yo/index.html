@@ -1,7 +1,9 @@
 ---
 layout: yofront
 title: yesh omrim
+suppress_link: true
 ---
+<h1>Summary page {{ paginator.page }} of {{ paginator.total_pages }}</h1>
 <div class='bloghead'>
 <p class='warning'><i>Warning:</i> This has been migrated from
 an earlier blog server. Links, images, and styles from postings
@@ -25,14 +27,14 @@ before 2018 may be funky.</p>
 <!-- Pagination links -->
 <div class="pagination">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+    <a href="{{ paginator.previous_page_path }}" class="previous">Later</a>
   {% else %}
-    <span class="previous">Previous</span>
+    <span class="previous muted">Later</span>
   {% endif %}
   <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+    <a href="{{ paginator.next_page_path }}" class="next">Earlier</a>
   {% else %}
-    <span class="next ">Next</span>
+    <span class="next muted">Earlier</span>
   {% endif %}
 </div>
