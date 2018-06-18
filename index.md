@@ -28,7 +28,7 @@ but more than [this one](https://www.sethgodin.com/).
 
 ## My blog, *yesh omrim*
 
-[See the blog front page here.]({% link yo/index.html %})
+[See the front page here.]({% link yo/index.html %})
 
 ### Recent posts
 
