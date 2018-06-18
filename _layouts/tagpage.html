@@ -1,0 +1,13 @@
+---
+layout: yofront
+---
+<h1>All posts in category {{ page.tag }}</h1>
+
+<table class='tagpage'>
+  {% for post in site.tags[page.tag] %}
+  <tr>
+    <td class="date">{{ post.date | date_to_string }}</td>
+    <td><a href="{{ post.url }}">{{ post.title }}</a></td>
+  </tr>
+  {% endfor %}
+</table>
