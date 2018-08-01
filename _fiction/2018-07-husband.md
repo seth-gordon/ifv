@@ -1,6 +1,6 @@
 ---
 title: Pretend Virtual Husband
-pubdate: forthcoming
-publisher: The Working Zealot's Guide To Gaining Capital in Pre-Apocalyptic America
+pubdate: July 2018
+publisher: "The Cockroach Conservatory: Vol. 1"
 ---
-* [Order the anthology](http://cockroachconservatory.blogspot.com/p/store.html)
+* [Order the anthology](http://a.co/7XV8y1y)
