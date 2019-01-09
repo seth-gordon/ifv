@@ -1,4 +1,4 @@
 ---
 name: Dreamwidth
-url: https://sethg.dreamwidth.org/profile
+exturl: https://sethg.dreamwidth.org/profile
 ---
