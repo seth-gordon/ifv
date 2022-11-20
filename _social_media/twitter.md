@@ -1,4 +1,4 @@
 ---
-name: Twitter (until it dies)
+name: Twitter
 exturl: https://twitter.com/ImagFamValues
 ---
