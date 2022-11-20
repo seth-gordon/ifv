@@ -13,7 +13,7 @@ but more than [this one](https://www.sethgodin.com/).
 
 <ul class="flatlist">
 {% for medium in site.social_media %}
-<li><a href="{{ medium.exturl }}">{{ medium.name }}</a></li>
+<li><a rel="me" href="{{ medium.exturl }}">{{ medium.name }}</a></li>
 {% endfor %}
 </ul>
 

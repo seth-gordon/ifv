@@ -1,7 +1,9 @@
 _site/
 .sass-cache/
 .jekyll-cache/
+_drafts/
 .jekyll-metadata
 #*
 *~
 .DS_Store
+Gemfile.lock

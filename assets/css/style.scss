@@ -146,6 +146,27 @@ ul.blognav {
     margin-top: 9px;
 }
 
+// figures
+
+figure {
+    float: right;
+    width: 38.2%; // 2 - phi
+    text-align: right;
+    font-size: smaller;
+    text-indent: 0;
+    color: $pale-ink;
+    padding: 1em;
+}
+figure.wide {
+    width: 61.8%;
+}
+figure.xwide {
+    width: 100%;
+}
+img.scaled {
+    width: 100%;
+}
+
 
 // legacy from the very old blog
 

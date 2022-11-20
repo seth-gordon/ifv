@@ -5,7 +5,7 @@ show_downloads: false
 theme: jekyll-theme-minimal
 paginate: 15
 paginate_path: "/yo/page:num/"
-logo: /assets/img/headshot-square.jpg
+logo: /assets/img/clark-kent-small.png
 collections:
 - social_media
 - fiction
